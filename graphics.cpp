@@ -17,6 +17,21 @@ void	DrawEllipse(float radiusX, float radiusY, float x, float y, Color c)
 	glEnd();
 }
 /*
+void	DrawLine(float tx, float ty, float x, float y, Color c)
+{
+	int		i;
+
+	glBegin(GL_LINES);
+	glLineWidth(2.5);
+	glColor3f(c.r, c.g, c.b);
+	glVertex2f(x - 1.0f, y - 1.0f);
+	glVertex2f(tx - 1.0f, ty - 1.0f);
+	glLineWidth(1);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glEnd();
+}
+*/
+/*
 void	output(int x, int y, Color c, int font, std::string s)
 {
 	glColor3f(c.r, c.g, c.b);

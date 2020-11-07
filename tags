@@ -1,0 +1,149 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALGOFOLDER	Makefile	/^ALGOFOLDER = algos$/;"	m
+ALIVESCORE	rules.h	/^# define ALIVESCORE /;"	d
+COLOR_H	color.h	/^# define COLOR_H$/;"	d
+CXX	Makefile	/^CXX = g++$/;"	m
+CXX	algos/Makefile	/^CXX = g++$/;"	m
+CXXFILES	Makefile	/^CXXFILES = $(patsubst %, %.cpp, $(SRCS))$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS = -std=c++17 -O3$/;"	m
+CXXFLAGS	algos/Makefile	/^CXXFLAGS = -std=c++17 -O3# -Werror -Wextra -Wall$/;"	m
+Color	color.h	/^}				Color;$/;"	t	typeref:struct:sColor
+DEG2RAD	graphics.h	/^# define DEG2RAD /;"	d
+DrawEllipse	graphics.cpp	/^void	DrawEllipse(float radiusX, float radiusY, float x, float y, Color c)$/;"	f
+EXTENSION	players.h	/^# define EXTENSION /;"	d
+EXTLEN	players.h	/^# define EXTLEN /;"	d
+FRAMEWORKS	Makefile	/^FRAMEWORKS = -lglfw -lglew -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo -framework GLUT$/;"	m
+GAEM_H	gaem.h	/^# define GAEM_H$/;"	d
+GAMEMAP	rules.h	/^# define GAMEMAP /;"	d
+GAME_H	algos/game.h	/^# define GAME_H$/;"	d
+GRAPHICS_H	graphics.h	/^# define GRAPHICS_H$/;"	d
+GRHEADERS	Makefile	/^GRHEADERS = $(patsubst %, %.h, $(GRSRCS))$/;"	m
+GROBJ	Makefile	/^GROBJ = $(patsubst %, %.o, $(GRSRCS))$/;"	m
+GRSRCS	Makefile	/^GRSRCS = graphics$/;"	m
+GameState	algos/game.cpp	/^GameState::GameState(char **argv)$/;"	f	class:GameState
+GameState	algos/game.h	/^class	GameState : public std::vector< std::vector<int> >$/;"	c
+GetMyHP	algos/game.cpp	/^int		GameState::GetMyHP()$/;"	f	class:GameState
+GetMyX	algos/game.cpp	/^int		GameState::GetMyX()$/;"	f	class:GameState
+GetMyY	algos/game.cpp	/^int		GameState::GetMyY()$/;"	f	class:GameState
+HEADERS	Makefile	/^HEADERS = $(patsubst %, %.h, $(SRCS))$/;"	m
+HP	rules.h	/^# define HP /;"	d
+INC	Makefile	/^INC = gaem.h$/;"	m
+INC	algos/Makefile	/^INC = game.h$/;"	m
+KILLSCORE	rules.h	/^# define KILLSCORE /;"	d
+LDFLAGS	Makefile	/^LDFLAGS="-L\/usr\/local\/opt\/freetype\/lib"$/;"	m
+MAPX	gaem.h	/^# define MAPX /;"	d
+MAPY	gaem.h	/^# define MAPY /;"	d
+MAP_H	map.h	/^# define MAP_H$/;"	d
+MAXSTEP	rules.h	/^# define MAXSTEP /;"	d
+MOVE_DOWN	rules.h	/^# define MOVE_DOWN /;"	d
+MOVE_LEFT	rules.h	/^# define MOVE_LEFT /;"	d
+MOVE_RIGHT	rules.h	/^# define MOVE_RIGHT /;"	d
+MOVE_UP	rules.h	/^# define MOVE_UP /;"	d
+Map	map.cpp	/^Map::Map() \/\/Matrix[n][m]$/;"	f	class:Map
+Map	map.cpp	/^Map::Map(int m, int n) \/\/Matrix[n][m]$/;"	f	class:Map
+Map	map.h	/^class	Map : public std::vector < std::vector<int> >$/;"	c
+MoveDown	algos/game.cpp	/^void	GameState::MoveDown()$/;"	f	class:GameState
+MoveLeft	algos/game.cpp	/^void	GameState::MoveLeft()$/;"	f	class:GameState
+MoveRight	algos/game.cpp	/^void	GameState::MoveRight()$/;"	f	class:GameState
+MoveUp	algos/game.cpp	/^void	GameState::MoveUp()$/;"	f	class:GameState
+NAME	Makefile	/^NAME = Application$/;"	m
+NAME	algos/Makefile	/^NAME = game$/;"	m
+OBJS	Makefile	/^OBJS = $(patsubst %, %.o, $(SRCS))$/;"	m
+OUT	algos/Makefile	/^OUT = $(SRCS:%.cpp=%)$/;"	m
+PLAYERS	algos/Makefile	/^PLAYERS = $(SRCS:%.cpp=%.player)$/;"	m
+PLAYERS	rules.h	/^# define PLAYERS /;"	d
+PLAYERSFCL	algos/Makefile	/^PLAYERSFCL = $(notdir $(PLAYERS))$/;"	m
+PLAYERS_H	players.h	/^# define PLAYERS_H$/;"	d
+Player	players.cpp	/^Player::Player(std::string aName, int iid, int hhp)$/;"	f	class:Player
+Player	players.h	/^class	Player$/;"	c
+PlayerVec	players.cpp	/^PlayerVec::PlayerVec(std::string algoFolder)$/;"	f	class:PlayerVec
+PlayerVec	players.h	/^class	PlayerVec : public std::vector<Player>$/;"	c
+PlayersState	algos/game.cpp	/^PlayersState::PlayersState()$/;"	f	class:PlayersState
+PlayersState	algos/game.h	/^class	PlayersState : public std::map<int, int>$/;"	c
+RULES_H	rules.h	/^# define RULES_H$/;"	d
+SHOOT_DOWN	rules.h	/^# define SHOOT_DOWN /;"	d
+SHOOT_LEFT	rules.h	/^# define SHOOT_LEFT /;"	d
+SHOOT_RIGHT	rules.h	/^# define SHOOT_RIGHT /;"	d
+SHOOT_UP	rules.h	/^# define SHOOT_UP /;"	d
+SHOTSCORE	rules.h	/^# define SHOTSCORE /;"	d
+SLEEP	rules.h	/^# define SLEEP /;"	d
+SRCS	Makefile	/^SRCS = map \\$/;"	m
+SRCS	algos/Makefile	/^SRCS = $(filter-out game.cpp, $(wildcard *\/*.cpp))$/;"	m
+STEPFILE	rules.h	/^# define STEPFILE /;"	d
+ShootDown	algos/game.cpp	/^void	GameState::ShootDown()$/;"	f	class:GameState
+ShootLeft	algos/game.cpp	/^void	GameState::ShootLeft()$/;"	f	class:GameState
+ShootRight	algos/game.cpp	/^void	GameState::ShootRight()$/;"	f	class:GameState
+ShootUp	algos/game.cpp	/^void	GameState::ShootUp()$/;"	f	class:GameState
+WINX	gaem.h	/^# define WINX /;"	d
+WINY	gaem.h	/^# define WINY /;"	d
+action	algos/game.h	/^	int				x, y, action, id;$/;"	m	class:GameState
+action	players.h	/^	int						id, hp, x, y, action, score;$/;"	m	class:Player
+algoName	players.h	/^	std::string				algoName;$/;"	m	class:Player
+b	color.h	/^	float		r, g, b;$/;"	m	struct:sColor
+c	players.h	/^	Color					c;$/;"	m	class:Player
+decreaseHealth	players.cpp	/^void					Player::decreaseHealth()$/;"	f	class:Player
+decreaseHealth	players.cpp	/^void					PlayerVec::decreaseHealth(int id)$/;"	f	class:PlayerVec
+died	players.h	/^	bool					isAlive, died;$/;"	m	class:Player
+display	map.cpp	/^void					Map::display()$/;"	f	class:Map
+findPos	map.cpp	/^std::pair<int, int>		Map::findPos(int id)$/;"	f	class:Map
+g	color.h	/^	float		r, g, b;$/;"	m	struct:sColor
+gameStep	Application.cpp	/^static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m, int &n)$/;"	f	file:
+getAction	players.cpp	/^int						Player::getAction()$/;"	f	class:Player
+getAlgoName	players.cpp	/^std::string				Player::getAlgoName()$/;"	f	class:Player
+getAlive	players.cpp	/^bool					Player::getAlive()$/;"	f	class:Player
+getAlivePlayersNum	players.cpp	/^int						PlayerVec::getAlivePlayersNum()$/;"	f	class:PlayerVec
+getColor	players.cpp	/^Color					Player::getColor()$/;"	f	class:Player
+getDied	players.cpp	/^bool					Player::getDied()$/;"	f	class:Player
+getHP	players.cpp	/^int						Player::getHP()$/;"	f	class:Player
+getId	players.cpp	/^int						Player::getId()$/;"	f	class:Player
+getName	players.cpp	/^std::string				Player::getName()$/;"	f	class:Player
+getNewAction	players.cpp	/^void					Player::getNewAction(std::string algoFolder,$/;"	f	class:Player
+getPos	players.cpp	/^std::pair<int, int>		Player::getPos()$/;"	f	class:Player
+getScore	players.cpp	/^int						Player::getScore()$/;"	f	class:Player
+getX	players.cpp	/^int						Player::getX()$/;"	f	class:Player
+getY	players.cpp	/^int						Player::getY()$/;"	f	class:Player
+hp	players.h	/^	int						id, hp, x, y, action, score;$/;"	m	class:Player
+id	algos/game.h	/^	int				x, y, action, id;$/;"	m	class:GameState
+id	players.h	/^	int						id, hp, x, y, action, score;$/;"	m	class:Player
+init	algos/game.cpp	/^void	PlayersState::init(int pnum)$/;"	f	class:PlayersState
+init	map.h	/^	bool					init = false;$/;"	m	class:Map
+isAlive	players.h	/^	bool					isAlive, died;$/;"	m	class:Player
+isInit	map.cpp	/^bool					Map::isInit()$/;"	f	class:Map
+key_callback	Application.cpp	/^static void		key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)$/;"	f	file:
+lifes	algos/game.h	/^	PlayersState	lifes;$/;"	m	class:GameState
+main	Application.cpp	/^int		main(int argc, char **argv) \/\/TODO map size x[2] y[3] algofolder [1]$/;"	f
+main	algos/algo1/temaplate.cpp	/^int									main(int argc, char **argv) \/\/ argv[1] - m argv[2] - n argv[3] - id argv[4]$/;"	f
+main	algos/algo2/bugUp.cpp	/^int									main(int argc, char **argv) \/\/ argv[1] - m argv[2] - n argv[3] - id argv[4]$/;"	f
+main	algos/algo4/bs.cpp	/^int									main(int argc, char **argv) \/\/ argv[1] - m argv[2] - n argv[3] - id argv[4]$/;"	f
+main	algos/random1/random1.cpp	/^int									main(int argc, char **argv) \/\/ argv[1] - m argv[2] - n argv[3] - id argv[4]$/;"	f
+main	algos/random2/random2.cpp	/^int									main(int argc, char **argv) \/\/ argv[1] - m argv[2] - n argv[3] - id argv[4]$/;"	f
+main	algos/random3/random3.cpp	/^int									main(int argc, char **argv) \/\/ argv[1] - m argv[2] - n argv[3] - id argv[4]$/;"	f
+main	algos/random4/random4.cpp	/^int									main(int argc, char **argv) \/\/ argv[1] - m argv[2] - n argv[3] - id argv[4]$/;"	f
+main	test.cpp	/^int		main(int argc, char **argv)$/;"	f
+move	map.cpp	/^std::pair<int, int>		Map::move(int id, int action)$/;"	f	class:Map
+playersnum	algos/game.h	/^	int				playersnum;$/;"	m	class:PlayersState
+plusScore	players.cpp	/^void					Player::plusScore(int bal)$/;"	f	class:Player
+printUsage	Application.cpp	/^static void		printUsage()$/;"	f	file:
+printWrong	Application.cpp	/^static void		printWrong()$/;"	f	file:
+r	color.h	/^	float		r, g, b;$/;"	m	struct:sColor
+randPlace	map.cpp	/^std::pair<int, int>		Map::randPlace(int id) \/\/TODO refactor$/;"	f	class:Map
+sColor	color.h	/^typedef	struct	sColor$/;"	s
+score	players.h	/^	int						id, hp, x, y, action, score;$/;"	m	class:Player
+setDied	players.cpp	/^void					Player::setDied(bool tmp)$/;"	f	class:Player
+setInit	map.cpp	/^void					Map::setInit()$/;"	f	class:Map
+setX	players.cpp	/^void					Player::setX(int newX)$/;"	f	class:Player
+setY	players.cpp	/^void					Player::setY(int newY)$/;"	f	class:Player
+shoot	map.cpp	/^int						Map::shoot(int id, int action)$/;"	f	class:Map
+updatePos	players.cpp	/^void					Player::updatePos(std::pair<int, int> coords)$/;"	f	class:Player
+writeToFile	map.cpp	/^void					Map::writeToFile(std::string algoFolder)$/;"	f	class:Map
+writeToFile	players.cpp	/^void					PlayerVec::writeToFile(std::string algoFolder)$/;"	f	class:PlayerVec
+x	algos/game.h	/^	int				x, y, action, id;$/;"	m	class:GameState
+x	players.h	/^	int						id, hp, x, y, action, score;$/;"	m	class:Player
+y	algos/game.h	/^	int				x, y, action, id;$/;"	m	class:GameState
+y	players.h	/^	int						id, hp, x, y, action, score;$/;"	m	class:Player
+~GameState	algos/game.cpp	/^GameState::~GameState()$/;"	f	class:GameState
