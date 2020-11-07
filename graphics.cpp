@@ -18,16 +18,25 @@ void	DrawEllipse(float radiusX, float radiusY, float x, float y, Color c)
 }
 
 
-void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
+void ShootingAnimate(float xPx, float yPx, float x, float y, int direction, Color c)
 {
+	printf("Zashel v func\n");
 	switch (direction) {
 		case 5: //SHOOT_DOWN
-			glBegin(GL_TRIANGLES);
+			printf("SHOOT_DOWN\n");
+			glBegin(GL_LINES);
+			glColor3f(c.r, c.g, c.b);
+			glLineWidth(10);
+			glVertex2f(x - 1.0f, y - 1.0f);
+			glVertex2f(x - 1.0f, -1.0f);
+			glLineWidth(1);
+			glEnd();
+			/*glBegin(GL_TRIANGLES);
 			glColor3f(1.0, 0.0, 0.0);
 			glVertex2f(x + (xPx / 2) - 1.0f, y - 1.0f);
 			glVertex2f(x - (xPx / 2) - 1.0f, y - 1.0f);
 			glVertex2f(x - 1.0f, -1.0f);
-			glEnd();
+			glEnd(); */
 			break;
 
 		case 6: //SHOOT_UP
