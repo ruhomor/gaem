@@ -1,0 +1,3 @@
+line to test algorithm
+./a.out 4 2 1 8
+[max_x] [max_y] [id] [number_of_players]
