@@ -20,7 +20,7 @@
 # include <GLFW/glfw3.h>
 //# include <FTGL/ftgl.h>
 //# include <GLUT/glut.h>
-
+# include <unistd.h>
 # include <tuple>
 # define WINX 640
 # define WINY 480
