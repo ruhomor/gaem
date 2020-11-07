@@ -18,7 +18,6 @@ static void		printWrong()
 
 static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m, int &n)
 {
-	usleep(SLEEP);
 	//DONE write game step
 	/* game step */
 	gameMap.display();
@@ -59,7 +58,7 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 				//DrawLine(playersTable[hitId].getX(), playersTable[hitId].getY(),
 				//		playersTable[i].getX(), playersTable[i].getY(), playersTable[i].getColor());
 				if (hitId > 0)
-				{
+				{ //POPAL
 					if (playersTable[hitId].getDied())
 					{
 						playersTable[i].plusScore(KILLSCORE);
@@ -72,6 +71,10 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 						std::cout << playersTable[i].getAlgoName()
 							<< " hit " << playersTable[hitId].getAlgoName();
 					}
+				}
+				else
+				{ //NE POPAL
+
 				}
 			}
 		}
@@ -151,13 +154,11 @@ int		main(int argc, char **argv) //TODO map size x[2] y[3] algofolder [1]
 
 	/* Make the window's context current */
 	glfwMakeContextCurrent(window);
-	int 	step = 0;
+
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
-		step++;
-		if (step >= MAXSTEP)
-			glfwSetWindowShouldClose(window, GLFW_TRUE);
+
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
 
@@ -208,6 +209,15 @@ int		main(int argc, char **argv) //TODO map size x[2] y[3] algofolder [1]
 			coords = playersTable[i].getPos();
 			coords.second = n - coords.second - 1;
 			std::cout << "x: " << coords.first << "y: " << coords.second << '\n';
+
+			int act = playersTable[i].getAction();
+			printf("%d TEKUSHEE DEISTVIE\n", act);
+			if (act > 4)
+			{
+				ShootingAnimate(xPx, yPx, xPx * coords.first + xPx / 2, yPx * coords.second + yPx / 2, act, playersTable[i].getColor());
+			}
+
+
 			if (playersTable[i].getAlive())
 			{
 				DrawEllipse(xPx / 2, yPx / 2,
@@ -228,6 +238,8 @@ int		main(int argc, char **argv) //TODO map size x[2] y[3] algofolder [1]
 				}
 				*/
 			}
+
+
 		}
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);
