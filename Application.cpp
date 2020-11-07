@@ -18,6 +18,7 @@ static void		printWrong()
 
 static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m, int &n)
 {
+	usleep(SLEEP);
 	//DONE write game step
 	/* game step */
 	gameMap.display();
@@ -148,11 +149,13 @@ int		main(int argc, char **argv) //TODO map size x[2] y[3] algofolder [1]
 
 	/* Make the window's context current */
 	glfwMakeContextCurrent(window);
-
+	int 	step = 0;
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
-
+		step++;
+		if (step >= MAXSTEP)
+			glfwSetWindowShouldClose(window, GLFW_TRUE);
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
 
