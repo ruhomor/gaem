@@ -18,12 +18,12 @@ void	DrawEllipse(float radiusX, float radiusY, float x, float y, Color c)
 }
 
 
-void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
+void ShootingAnimateWall(float xPx, float yPx, float x, float y, int direction, Color c)
 {
 	switch (direction) {
 		case 5: //SHOOT_DOWN
-			glBegin(GL_TRIANGLES);
-			glColor3f(1.0, 0.0, 0.0);
+			glBegin(GL_TRIANGLE_FAN);
+			glColor3f(c.r, c.g, c.b);
 			glVertex2f(x + (xPx / 2) - 1.0f, y - 1.0f);
 			glVertex2f(x - (xPx / 2) - 1.0f, y - 1.0f);
 			glVertex2f(x - 1.0f, -1.0f);
@@ -31,8 +31,8 @@ void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
 			break;
 
 		case 6: //SHOOT_UP
-			glBegin(GL_TRIANGLES);
-			glColor3f(1.0, 0.0, 0.0);
+			glBegin(GL_TRIANGLE_FAN);
+			glColor3f(c.r, c.g, c.b);
 			glVertex2f(x + (xPx / 2) - 1.0f, y - 1.0f);
 			glVertex2f(x - (xPx / 2) - 1.0f, y - 1.0f);
 			glVertex2f(x - 1.0f, 1.0f);
@@ -40,7 +40,7 @@ void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
 			break;
 		case 7: //SHOOT_LEFT
 			glBegin(GL_TRIANGLE_FAN);
-			glColor3f(1.0, 0.0, 0.0);
+			glColor3f(c.r, c.g, c.b);
 			glVertex2f(x - 1.0f, y + (yPx / 2) - 1.0f);
 			glVertex2f(x - 1.0f, y - (yPx / 2) - 1.0f);
 			glVertex2f(-1.0, y - 1.0f);
@@ -48,7 +48,7 @@ void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
 			break;
 		case 8: //SHOOT_RIGHT
 			glBegin(GL_TRIANGLE_FAN);
-			glColor3f(1.0, 0.0, 0.0);
+			glColor3f(c.r, c.g, c.b);
 			glVertex2f(x - 1.0f, y + (yPx / 2) - 1.0f);
 			glVertex2f(x - 1.0f, y - (yPx / 2) - 1.0f);
 			glVertex2f(1.0, y - 1.0f);
@@ -58,6 +58,11 @@ void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
 		default:
 			break;
 	}
+
+}
+
+void ShootingAnimateHit(float xPx, float yPx, float x, float y, int direction, Color c, int tx, int ty)
+{
 
 }
 /*

@@ -59,6 +59,10 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 				//		playersTable[i].getX(), playersTable[i].getY(), playersTable[i].getColor());
 				if (hitId > 0)
 				{ //POPAL
+					void ShootingAnimateHit(xPx, yPx, playersTable[i].getX(), playersTable[i].getY(),
+					playersTable[i].getAction(), playersTable[i].getColor(),
+					playersTable[hitId].getX(), playersTable[hitId].getY())
+
 					if (playersTable[hitId].getDied())
 					{
 						playersTable[i].plusScore(KILLSCORE);
@@ -74,7 +78,8 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 				}
 				else
 				{ //NE POPAL
-
+					ShootingAnimateWall(xPx, yPx, playersTable[i].getX(), playersTable[i].getY(),
+					playersTable[i].getAction(), playersTable[i].getColor());
 				}
 			}
 		}
@@ -214,7 +219,7 @@ int		main(int argc, char **argv) //TODO map size x[2] y[3] algofolder [1]
 			printf("%d TEKUSHEE DEISTVIE\n", act);
 			if (act > 4)
 			{
-				ShootingAnimate(xPx, yPx, xPx * coords.first + xPx / 2, yPx * coords.second + yPx / 2, act, playersTable[i].getColor());
+				ShootingAnimateWall(xPx, yPx, xPx * coords.first + xPx / 2, yPx * coords.second + yPx / 2, act, playersTable[i].getColor());
 			}
 
 
