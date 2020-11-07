@@ -59,9 +59,9 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 				//		playersTable[i].getX(), playersTable[i].getY(), playersTable[i].getColor());
 				if (hitId > 0)
 				{ //POPAL
-					void ShootingAnimateHit(xPx, yPx, playersTable[i].getX(), playersTable[i].getY(),
+					ShootingAnimateHit(xPx, yPx, playersTable[i].getX(), playersTable[i].getY(),
 					playersTable[i].getAction(), playersTable[i].getColor(),
-					playersTable[hitId].getX(), playersTable[hitId].getY())
+					playersTable[hitId].getX(), playersTable[hitId].getY());
 
 					if (playersTable[hitId].getDied())
 					{
