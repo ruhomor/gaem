@@ -17,7 +17,7 @@
 void	DrawEllipse(float radiusX, float radiusY, float x, float y, Color c);
 //void	DrawLine(float tx, float ty, float x, float y, Color c);
 //void	output(int x, int y, Color c, int font, std::string s);
-void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
+void ShootingAnimate(float xPx, float yPx, float x, float y, int direction, Color c);
 
 
 #endif
