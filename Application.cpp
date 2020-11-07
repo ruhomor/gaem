@@ -223,6 +223,11 @@ int		main(int argc, char **argv) //TODO map size x[2] y[3] algofolder [1]
 				}
 				*/
 			}
+
+			if (playersTable[i].getAction() > 4)
+			{
+				ShootingAnimate(xPx, yPx, xPx * coords.first + xPx / 2, yPx * coords.second + yPx / 2, playersTable[i].getAction());
+			}
 		}
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

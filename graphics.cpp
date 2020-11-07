@@ -16,6 +16,50 @@ void	DrawEllipse(float radiusX, float radiusY, float x, float y, Color c)
 	}
 	glEnd();
 }
+
+
+void ShootingAnimate(float xPx, float yPx, float x, float y, int direction)
+{
+	switch (direction) {
+		case 5: //SHOOT_DOWN
+			glBegin(GL_TRIANGLES);
+			glColor3f(1.0, 0.0, 0.0);
+			glVertex2f(x + (xPx / 2) - 1.0f, y - 1.0f);
+			glVertex2f(x - (xPx / 2) - 1.0f, y - 1.0f);
+			glVertex2f(x - 1.0f, -1.0f);
+			glEnd();
+			break;
+
+		case 6: //SHOOT_UP
+			glBegin(GL_TRIANGLES);
+			glColor3f(1.0, 0.0, 0.0);
+			glVertex2f(x + (xPx / 2) - 1.0f, y - 1.0f);
+			glVertex2f(x - (xPx / 2) - 1.0f, y - 1.0f);
+			glVertex2f(x - 1.0f, 1.0f);
+			glEnd();
+			break;
+		case 7: //SHOOT_LEFT
+			glBegin(GL_TRIANGLE_FAN);
+			glColor3f(1.0, 0.0, 0.0);
+			glVertex2f(x - 1.0f, y + (yPx / 2) - 1.0f);
+			glVertex2f(x - 1.0f, y - (yPx / 2) - 1.0f);
+			glVertex2f(-1.0, y - 1.0f);
+			glEnd();
+			break;
+		case 8: //SHOOT_RIGHT
+			glBegin(GL_TRIANGLE_FAN);
+			glColor3f(1.0, 0.0, 0.0);
+			glVertex2f(x - 1.0f, y + (yPx / 2) - 1.0f);
+			glVertex2f(x - 1.0f, y - (yPx / 2) - 1.0f);
+			glVertex2f(1.0, y - 1.0f);
+			glEnd();
+			break;
+
+		default:
+			break;
+	}
+
+}
 /*
 void	output(int x, int y, Color c, int font, std::string s)
 {
