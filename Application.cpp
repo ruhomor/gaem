@@ -55,6 +55,8 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 			if ((tmpAction > 4) && (tmpAction < 9))
 			{
 				playersTable.decreaseHealth(hitId);
+				//DrawLine(playersTable[hitId].getX(), playersTable[hitId].getY(),
+				//		playersTable[i].getX(), playersTable[i].getY(), playersTable[i].getColor());
 				if (hitId > 0)
 				{ //POPAL
 					if (playersTable[hitId].getDied())
