@@ -56,7 +56,7 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 			{
 				playersTable.decreaseHealth(hitId);
 				if (hitId > 0)
-				{
+				{ //POPAL
 					if (playersTable[hitId].getDied())
 					{
 						playersTable[i].plusScore(KILLSCORE);
@@ -69,6 +69,10 @@ static void		gameStep(Map &gameMap, char **argv, PlayerVec &playersTable, int &m
 						std::cout << playersTable[i].getAlgoName()
 							<< " hit " << playersTable[hitId].getAlgoName();
 					}
+				}
+				else
+				{ //NE POPAL
+
 				}
 			}
 		}
